@@ -1,7 +1,6 @@
-import { Elysia } from "elysia";
+import Server from './config/server';
 
-const app = new Elysia().get("/", () => "Hello Elysia").listen(3000);
-
-console.log(
-  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
-);
+const server = new Server();
+server.start().catch(error => {
+    console.error('Failed to start server:', error);
+});
