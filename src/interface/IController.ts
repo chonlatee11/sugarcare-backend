@@ -1,4 +1,3 @@
-
 export interface IController {
-    getHealth(): any;
+  getHealth(): any;
 }
